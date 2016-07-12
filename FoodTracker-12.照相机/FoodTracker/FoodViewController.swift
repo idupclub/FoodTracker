@@ -58,6 +58,8 @@ class FoodViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if let food = food {
             navigationItem.title = food.name
             foodNameText.text   = food.name
+            photoImage.image = food.photo
+            
         }
     }
 
@@ -89,7 +91,9 @@ class FoodViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if saveBtn === sender {
             let name = foodNameText.text ?? ""
             
-            food = Food(name: name, photo: nil)
+            let photo = photoImage.image
+            
+            food = Food(name: name, photo: photo )
         }
     }
     

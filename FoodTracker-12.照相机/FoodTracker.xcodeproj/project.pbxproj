@@ -14,6 +14,7 @@
 		3486C5DD1D31F25800B5A6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3486C5DB1D31F25800B5A6BA /* Main.storyboard */; };
 		3486C5DF1D31F25800B5A6BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3486C5DE1D31F25800B5A6BA /* Assets.xcassets */; };
 		3486C5EA1D31F40D00B5A6BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3486C5E91D31F40D00B5A6BA /* LaunchScreen.storyboard */; };
+		34940E491D353E110039EE4B /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34940E481D353E110039EE4B /* FoodCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3486C5DE1D31F25800B5A6BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3486C5E31D31F25800B5A6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3486C5E91D31F40D00B5A6BA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		34940E481D353E110039EE4B /* FoodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3427AEA61D32370C00CAC407 /* FoodListViewController.swift */,
 				3427AEA81D3238E100CAC407 /* Food.swift */,
 				3427AEAA1D3245FF00CAC407 /* FoodViewController.swift */,
+				34940E481D353E110039EE4B /* FoodCell.swift */,
 			);
 			path = FoodTracker;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				3427AEA91D3238E100CAC407 /* Food.swift in Sources */,
 				3427AEA71D32370C00CAC407 /* FoodListViewController.swift in Sources */,
+				34940E491D353E110039EE4B /* FoodCell.swift in Sources */,
 				3427AEAB1D3245FF00CAC407 /* FoodViewController.swift in Sources */,
 				3486C5D81D31F25800B5A6BA /* AppDelegate.swift in Sources */,
 			);

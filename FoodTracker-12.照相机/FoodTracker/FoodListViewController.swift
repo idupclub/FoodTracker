@@ -62,10 +62,14 @@ class FoodListViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("foodCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("foodCell", forIndexPath: indexPath) as! FoodCell
+        
+        
 
 
-        cell.textLabel?.text = foods[indexPath.row].name
+        cell.foodName.text = foods[indexPath.row].name
+        
+        cell.foodImage.image = foods[indexPath.row].photo
         
         return cell
     }

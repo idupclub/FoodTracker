@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -16,25 +15,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" id="F3J-Hb-9UZ">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" rowHeight="60" id="F3J-Hb-9UZ" customClass="FoodCell" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F3J-Hb-9UZ" id="2ap-a3-4t1">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62Y-0V-I0d">
-                                            <rect key="frame" x="26" y="0.0" width="56" height="35.5"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw7-oJ-wcb">
                                             <rect key="frame" x="110" y="7" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62Y-0V-I0d">
+                                            <rect key="frame" x="21" y="5" width="56" height="50"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="foodImage" destination="62Y-0V-I0d" id="xl7-T5-K1Y"/>
+                                    <outlet property="foodName" destination="aw7-oJ-wcb" id="vAN-mq-GGn"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showfood" id="hHV-vg-uUg"/>
                                 </connections>
                             </tableViewCell>
@@ -73,13 +74,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ImS-pK-oie">
-                                <rect key="frame" x="110" y="301" width="363" height="257"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultImg" translatesAutoresizingMaskIntoConstraints="NO" id="ImS-pK-oie">
+                                <rect key="frame" x="80" y="216" width="320" height="320"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ImS-pK-oie" secondAttribute="height" multiplier="1:1" id="XCA-qq-5FK"/>
-                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="fAJ-F4-0jG" appends="YES" id="thp-ts-zwb"/>
                                 </connections>
@@ -87,7 +85,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ImS-pK-oie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5CW-Kt-O7y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h7k-Ni-hkC" secondAttribute="trailing" id="YV7-Yg-aNB"/>
                             <constraint firstItem="h7k-Ni-hkC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZoH-47-RAG"/>
                         </constraints>
@@ -157,6 +154,9 @@
             <point key="canvasLocation" x="1419" y="854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultImg" width="540" height="540"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hHV-vg-uUg"/>
     </inferredMetricsTieBreakers>
